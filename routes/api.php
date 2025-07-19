@@ -18,6 +18,7 @@ Route::get('/categories', [CategoriesController::class, 'index']);
 
 /* Expenses */
 Route::prefix('/finances')->group(function () {
+    Route::get('', [FinancesController::class, 'index']);
     Route::post('/import', [FinancesController::class, 'importRecord']);
 });
 
