@@ -15,10 +15,11 @@ class RecordResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'Tanggal' => $this->created_at,
-            'Deskripsi' => $this->description,
-            'Kategori' => $this->category,
-            'Jumlah' => round($this->amount, 2)
+            'id' => $this->id,
+            'tanggal' => $this->created_at,
+            'deskripsi' => $this->description,
+            'kategori' => $this->category,
+            'jumlah' => round($this->amount, 2)
         ];
     }
 }
