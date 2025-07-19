@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\ExpensesController;
+use App\Http\Controllers\FinancesController;
 use App\Http\Controllers\HelloController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,7 +17,7 @@ Route::get('/hello-world', [HelloController::class, 'index']);
 Route::get('/categories', [CategoriesController::class, 'index']);
 
 /* Expenses */
-Route::prefix('/expenses')->group(function () {
-    Route::post('/import', [ExpensesController::class, 'importExpenses']);
+Route::prefix('/finances')->group(function () {
+    Route::post('/import', [FinancesController::class, 'importRecord']);
 });
 

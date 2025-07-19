@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
-class ExpensesController extends Controller
+class FinancesController extends Controller
 {
-    public function importExpenses(Request $request):JsonResponse {
+    public function importRecord(Request $request):JsonResponse {
         $validator = Validator::make($request->all(), [
             'csv' => ['required', 'mimes:csv'],
         ]);
